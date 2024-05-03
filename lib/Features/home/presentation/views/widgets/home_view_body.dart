@@ -1,7 +1,6 @@
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
+import 'best_seller_list_item.dart';
 import 'custom_app_bar.dart';
 import 'featured_list_view.dart';
 
@@ -18,10 +17,8 @@ class HomeViewBody extends StatelessWidget {
           CustomAppBar(),
           FeaturedListView(),
           SizedBox(height: 50),
-          Text(
-            'Best Seller',
-            style: Styles.titleMedium,
-          ),
+          Text('Best Seller', style: Styles.titleMedium),
+          BestSellerListViewItem(),
         ],
       ),
     );
