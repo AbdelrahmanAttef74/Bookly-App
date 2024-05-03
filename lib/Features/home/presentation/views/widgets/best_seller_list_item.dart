@@ -6,12 +6,12 @@ class BestSellerListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SizedBox(
-          height: 125,
-          child: AspectRatio(
-            aspectRatio: 2.7 / 4,
+    return SizedBox(
+      height: 125,
+      child: Row(
+        children: [
+          AspectRatio(
+            aspectRatio: 2.5 / 4,
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.red,
@@ -22,9 +22,9 @@ class BestSellerListViewItem extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }
