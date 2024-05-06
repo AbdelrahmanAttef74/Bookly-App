@@ -18,9 +18,9 @@ class BookRating extends StatelessWidget {
           color: Colors.yellow,
         ),
         const SizedBox(width: 6.3),
-        const Text(
+        Text(
           '4.8',
-          style: Styles.testStyle14,
+          style: Styles.testStyle14.copyWith(fontWeight: FontWeight.bold),
         ),
         const SizedBox(width: 5),
         Text(
