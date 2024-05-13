@@ -31,7 +31,7 @@ class CustomButton extends StatelessWidget {
         onPressed: () {},
         child: Text(
           text,
-          style: Styles.testStyle18.copyWith(
+          style: Styles.textStyle18.copyWith(
             color: textColor,
             fontSize: fontSize,
           ),

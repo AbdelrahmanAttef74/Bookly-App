@@ -8,7 +8,7 @@ class CustomErrorMessage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       errMessage,
-      style: Styles.testStyle16,
+      style: Styles.textStyle16,
     );
   }
 }

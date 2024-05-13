@@ -23,20 +23,22 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(height: 43),
         const Text(
           'The Jungle Book',
-          style: Styles.testStyle30,
+          style: Styles.textStyle30,
         ),
         const SizedBox(height: 6),
         Opacity(
           opacity: .7,
           child: Text(
             'Rudyard Kipling',
-            style: Styles.testStyle18.copyWith(
+            style: Styles.textStyle18.copyWith(
               fontStyle: FontStyle.italic,
             ),
           ),
         ),
         const SizedBox(height: 16),
         const BookRating(
+          rating: 5,
+          count: 255,
           mainAxisAlignment: MainAxisAlignment.center,
         ),
         const SizedBox(height: 37),

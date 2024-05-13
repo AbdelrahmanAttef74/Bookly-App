@@ -13,7 +13,7 @@ class SimilarBooksSection extends StatelessWidget {
       children: [
         Text(
           'You can also like',
-          style: Styles.testStyle16.copyWith(
+          style: Styles.textStyle16.copyWith(
             fontWeight: FontWeight.bold,
           ),
         ),
