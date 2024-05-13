@@ -11,10 +11,10 @@ final class SimilarBooksInitial extends SimilarBooksState {}
 
 final class SimilarBooksLoading extends SimilarBooksState {}
 
-final class SimilarBooksFaliure extends SimilarBooksState {
+final class SimilarBooksFailure extends SimilarBooksState {
   final String errMessage;
 
-  const SimilarBooksFaliure(this.errMessage);
+  const SimilarBooksFailure(this.errMessage);
 }
 
 final class SimilarBooksSuccess extends SimilarBooksState {

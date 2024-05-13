@@ -8,20 +8,23 @@ import 'package:go_router/go_router.dart';
 import 'book_rating.dart';
 
 class BookListViewItem extends StatelessWidget {
-  const BookListViewItem({super.key, required this.books});
-  final BookModel books;
+  const BookListViewItem({super.key, required this.bookModel});
+  final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kBookDetailsView);
+        GoRouter.of(context).push(
+          AppRouter.kBookDetailsView,
+          extra: bookModel,
+        );
       },
       child: SizedBox(
         height: 125,
         child: Row(
           children: [
             CustomBookImageItem(
-                imageUrl: books.volumeInfo.imageLinks.thumbnail),
+                imageUrl: bookModel.volumeInfo.imageLinks.thumbnail),
             const SizedBox(width: 30),
             Expanded(
               child: Column(
@@ -30,7 +33,7 @@ class BookListViewItem extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * .5,
                     child: Text(
-                      books.volumeInfo.title!,
+                      bookModel.volumeInfo.title!,
                       style: Styles.textStyle20,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
@@ -38,7 +41,7 @@ class BookListViewItem extends StatelessWidget {
                   ),
                   const SizedBox(height: 3),
                   Text(
-                    books.volumeInfo.authors![0],
+                    bookModel.volumeInfo.authors![0],
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(height: 3),
@@ -50,8 +53,8 @@ class BookListViewItem extends StatelessWidget {
                           )),
                       const Spacer(),
                       BookRating(
-                        rating: books.volumeInfo.pageCount ?? 0,
-                        count: books.volumeInfo.pageCount ?? 0,
+                        rating: bookModel.volumeInfo.pageCount ?? 0,
+                        count: bookModel.volumeInfo.pageCount ?? 0,
                       ),
                     ],
                   )
